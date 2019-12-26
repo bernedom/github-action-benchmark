@@ -47,7 +47,8 @@ function validateDataJson(data: DataJson) {
             if (!(VALID_TOOLS as string[]).includes(tool)) {
                 throw new Error(`Invalid tool ${tool}`);
             }
-            if (!commit.url.startsWith('https://github.com/rhysd/github-action-benchmark/commit/')) {
+            if (!commit.url.startsWith('https://github.com/rhysd/github-action-benchmark/commit/') &&
+                !commit.url.startsWith('https://github.com/bernedom/github-action-benchmark/commit/')) {
                 throw new Error(`Invalid commit url: ${commit.url}`);
             }
             if (!commit.url.endsWith(commit.id)) {
