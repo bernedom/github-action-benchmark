@@ -36,7 +36,7 @@ function validateDataJson(data: DataJson) {
         throw new Error(`Last update is not correct: ${lastUpdate} v.s. ${now}`);
     }
 
-    if (repoUrl !== 'https://github.com/rhysd/github-action-benchmark') {
+    if (repoUrl !== 'https://github.com/bernedom/github-action-benchmark' && repoUrl !== 'https://github.com/rhysd/github-action-benchmark') {
         throw new Error(`repoUrl is not correct: ${repoUrl}`);
     }
 
