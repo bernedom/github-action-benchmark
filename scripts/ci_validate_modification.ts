@@ -36,10 +36,12 @@ function validateDataJson(data: DataJson) {
         throw new Error(`Last update is not correct: ${lastUpdate} v.s. ${now}`);
     }
 
-    if (repoUrl !== 'https://github.com/rhysd/github-action-benchmark') {
+    if (
+        repoUrl !== 'https://github.com/bernedom/github-action-benchmark' &&
+        repoUrl !== 'https://github.com/rhysd/github-action-benchmark'
+    ) {
         throw new Error(`repoUrl is not correct: ${repoUrl}`);
     }
-
     for (const benchName of Object.keys(suites)) {
         for (const suite of suites[benchName]) {
             const { commit, tool, date, benches } = suite;
@@ -48,7 +50,7 @@ function validateDataJson(data: DataJson) {
             }
             if (
                 !commit.url.startsWith('https://github.com/rhysd/github-action-benchmark/commit/') &&
-                !/\/pull\/\d+\/commits\/[a-f0-9]+$/.test(commit.url)
+                !commit.url.startsWith('https://github.com/bernedom/github-action-benchmark/commit/')
             ) {
                 throw new Error(`Invalid commit url: ${commit.url}`);
             }
