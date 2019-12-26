@@ -27,7 +27,7 @@ jobs:
         uses: ./
         with:
           name: Rust Benchmark
-          tool: 'cargo'
+          tool: "cargo"
           output-file-path: examples/rust/output.txt
           skip-fetch-gh-pages: true
           fail-on-alert: true
@@ -57,7 +57,7 @@ jobs:
         uses: ./
         with:
           name: Go Benchmark
-          tool: 'go'
+          tool: "go"
           output-file-path: examples/go/output.txt
           skip-fetch-gh-pages: true
           fail-on-alert: true
@@ -86,7 +86,7 @@ jobs:
         uses: ./
         with:
           name: Benchmark.js Benchmark
-          tool: 'benchmarkjs'
+          tool: "benchmarkjs"
           output-file-path: examples/benchmarkjs/output.txt
           skip-fetch-gh-pages: true
           fail-on-alert: true
@@ -119,7 +119,7 @@ jobs:
         uses: ./
         with:
           name: Python Benchmark with pytest-benchmark
-          tool: 'pytest'
+          tool: "pytest"
           output-file-path: examples/pytest/output.json
           skip-fetch-gh-pages: true
           fail-on-alert: true
@@ -155,7 +155,7 @@ jobs:
         uses: ./
         with:
           name: C++ Benchmark
-          tool: 'googlecpp'
+          tool: "googlecpp"
           output-file-path: examples/cpp/benchmark_result.json
           skip-fetch-gh-pages: true
           fail-on-alert: true
@@ -184,14 +184,14 @@ jobs:
         uses: ./
         with:
           name: Alert setup example with cache
-          tool: 'go'
+          tool: "go"
           output-file-path: examples/go/output.txt
           external-data-json-path: ./cache/benchmark-data.json
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          alert-threshold: '200%'
+          alert-threshold: "200%"
           comment-on-alert: true
           fail-on-alert: true
-          alert-comment-cc-users: '@rhysd'
+          alert-comment-cc-users: "@bernedom"
   unit-tests:
     name: Run unit tests
     runs-on: ubuntu-latest
