@@ -12,5 +12,5 @@ jobs:
           cd examples/catch2
           mkdir build && cd build
           cmake ..
-          cmake --build . 
+          cmake --build .
           ./Catch2_bench
