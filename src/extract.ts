@@ -267,6 +267,90 @@ function extractGoogleCppResult(output: string): BenchmarkResult[] {
     });
 }
 
+function extractCatch2Result(output: string): BenchmarkResult[] {
+    const lines = output.split('\n');
+
+    const ret = [];
+    // Example:
+    //   test bench_fib_20 ... bench:      37,174 ns/iter (+/- 7,527)
+    const reTestCaseStart = /^(benchmark name) +(samples) +(iterations) +(estimated)/;
+    const reBenchmarkStart = /^([a-zA-Z\d ]+) +([\d]+) +([\d]+) +([\d]+\.[\d]+) (ms|us)/;
+    const reBenchmarkValues = /^ +([\d]+\.[\d]+) (us|ms) +([\d]+\.[\d]+) (us|ms) +([\d]+\.[\d]+) (us|ms)/;
+    // const reDash_separator = /^-{79}/;
+    // const reEqual_separator = /^={79}/;
+    // const reDash_separator = /^-{79}/;
+    // const reSpace_separator = /^ {79}/;
+    // const reDot_separator = /^\.{79}/;
+    // const reDot_separator = /^\.{79}/;
+    let benchmarkNr = -1;
+    let testCaseNr = -1;
+
+    const currentValue = 0;
+    const currentUnit = '';
+    const currentRange = '';
+    let linesSinceBenchmarkStart = -1;
+
+    for (const line of lines) {
+        const m = line.match(reTestCaseStart);
+        if (m != null) {
+            console.log('TESTCASE START\n');
+            testCaseNr++;
+        }
+        // no benchmark section found so far, ignore
+        if (testCaseNr < 0) {
+            continue;
+        }
+
+        if (benchmarkNr >= 0) {
+            linesSinceBenchmarkStart++;
+        }
+
+        const benchmarkValueMatch = line.match(reBenchmarkValues);
+        if (benchmarkValueMatch === null && linesSinceBenchmarkStart == 1) {
+            throw new Error(
+                'Retrieved a catch2 benchmark but no values for it\nCatch2 result file is possibly mangled\n\n' + line,
+            );
+        }
+        if (linesSinceBenchmarkStart == 1 && benchmarkValueMatch != null) {
+            ret[benchmarkNr].value = parseFloat(benchmarkValueMatch[1]);
+            ret[benchmarkNr].unit = benchmarkValueMatch[2];
+            console.log('GOT VALUES');
+        }
+        if (linesSinceBenchmarkStart == 2 && benchmarkValueMatch != null) {
+            ret[benchmarkNr].range = '+/- ' + benchmarkValueMatch[1].trim();
+        }
+
+        const benchmarkMatch = line.match(reBenchmarkStart);
+        if (benchmarkMatch != null) {
+            linesSinceBenchmarkStart = 0;
+            benchmarkNr++;
+            ret.push({
+                name: benchmarkMatch[1].trim(),
+                value: currentValue,
+                range: currentRange,
+                unit: currentUnit,
+                extra: benchmarkMatch[2] + ' samples',
+            });
+        }
+
+        // // const name = m[1];
+        // // const value = parseInt(m[2],10);
+        // // const range = m[3];
+        // const name = 'any';
+        // const value = 123;
+        // const range = '+/- 755';
+
+        // ret.push({
+        //     name,
+        //     value,
+        //     range,
+        //     unit: 'ns/iter',
+        // });
+    }
+
+    return ret;
+}
+
 export async function extractResult(config: Config): Promise<Benchmark> {
     const output = await fs.readFile(config.outputFilePath, 'utf8');
     const { tool } = config;
@@ -287,6 +371,9 @@ export async function extractResult(config: Config): Promise<Benchmark> {
             break;
         case 'googlecpp':
             benches = extractGoogleCppResult(output);
+            break;
+        case 'catch2':
+            benches = extractCatch2Result(output);
             break;
         default:
             throw new Error(`FATAL: Unexpected tool: '${tool}'`);

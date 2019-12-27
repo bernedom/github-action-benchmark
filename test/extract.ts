@@ -44,6 +44,25 @@ describe('extractResult()', function() {
             ],
         },
         {
+            tool: 'catch2',
+            expected: [
+                {
+                    name: 'Fibonacci 20',
+                    range: '+/- 11.719',
+                    unit: 'us',
+                    value: 43.186,
+                    extra: '100 samples',
+                },
+                {
+                    name: 'Fibonacci 25',
+                    range: '+/- 65.064',
+                    unit: 'us',
+                    value: 451.183,
+                    extra: '100 samples',
+                },
+            ],
+        },
+        {
             tool: 'go',
             expected: [
                 {
