@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578175533630,
+  "lastUpdate": 1578175543730,
   "entries": {
     "Rust Benchmark": [
       {
@@ -12903,6 +12903,44 @@ window.BENCHMARK_DATA = {
             "range": "±1.09%",
             "unit": "ops/sec",
             "extra": "87 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": false,
+          "id": "14faeb3313ec9107d719bb4a5ae0ea41176d3f84",
+          "message": "Fixing names for storing benchmark",
+          "timestamp": "2020-01-04T22:54:48+01:00",
+          "tree_id": "89861b5dd4cff4cac5916383ef751359bc1601f8",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/14faeb3313ec9107d719bb4a5ae0ea41176d3f84"
+        },
+        "date": 1578175542856,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "fib(10)",
+            "value": 970648,
+            "range": "±0.64%",
+            "unit": "ops/sec",
+            "extra": "86 samples"
+          },
+          {
+            "name": "fib(20)",
+            "value": 8235,
+            "range": "±0.86%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
           }
         ]
       }
