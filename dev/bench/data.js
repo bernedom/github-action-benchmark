@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1576772036381,
+  "lastUpdate": 1578174025516,
   "entries": {
     "Rust Benchmark": [
       {
@@ -17523,6 +17523,42 @@ window.BENCHMARK_DATA = {
             "value": 30156.546743582072,
             "unit": "ns/iter",
             "extra": "iterations: 22709\ncpu: 30154.0374741292 ns\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": false,
+          "id": "a4f3a2eafb38312b81f145c44bc2df0098cd64e0",
+          "message": "Trivial implementation for extraction of catch2 result",
+          "timestamp": "2019-12-27T23:58:26+01:00",
+          "tree_id": "1d2b181411743ab8036f561a794a64eab27aad90",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/a4f3a2eafb38312b81f145c44bc2df0098cd64e0"
+        },
+        "date": 1578174024664,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "fib_10",
+            "value": 222.44088174876612,
+            "unit": "ns/iter",
+            "extra": "iterations: 3258207\ncpu: 222.34931052569715 ns\nthreads: 1"
+          },
+          {
+            "name": "fib_20",
+            "value": 29756.15290225306,
+            "unit": "ns/iter",
+            "extra": "iterations: 23878\ncpu: 29731.875408325646 ns\nthreads: 1"
           }
         ]
       }
