@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578347702151,
+  "lastUpdate": 1578348545013,
   "entries": {
     "Rust Benchmark": [
       {
@@ -8729,6 +8729,42 @@ window.BENCHMARK_DATA = {
             "value": 61836,
             "unit": "ns/op",
             "extra": "20000 times\n2 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "7e7ae9099de0aedeb665dcb0a5f2abbf270aa2f1",
+          "message": "Hint for creating existing data in CONTRIBUTING.md",
+          "timestamp": "2020-01-06T23:07:55+01:00",
+          "tree_id": "7853a47293ecc6d9c4bc9087aa73d0f07f52e444",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/7e7ae9099de0aedeb665dcb0a5f2abbf270aa2f1"
+        },
+        "date": 1578348542686,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib10",
+            "value": 476,
+            "unit": "ns/op",
+            "extra": "3000000 times\n2 procs"
+          },
+          {
+            "name": "BenchmarkFib20",
+            "value": 57449,
+            "unit": "ns/op",
+            "extra": "30000 times\n2 procs"
           }
         ]
       }
@@ -17747,45 +17783,45 @@ window.BENCHMARK_DATA = {
         ]
       }
     ],
-    "Catch2 Benchmark" : [
+    "Catch2 Benchmark": [
       {
         "commit": {
-            "author": {
-                "email": "dominik.berner@gmail.com",
-                "name": "Dominik Berner",
-                "username": "bernedom"
-            },
-            "committer": {
-                "email": "dominik.berner@gmail.com",
-                "name": "Dominik Berner",
-                "username": "bernedom"
-            },
-            "distinct": true,
-            "id": "e404ca3331e512c4561016e789278403cb36be9f",
-            "message": "Readded validation step",
-            "timestamp": "2020-01-04T23:19:40+01:00",
-            "tree_id": "89861b5dd4cff4cac5916383ef751359bc1601f8",
-            "url": "https://github.com/bernedom/github-action-benchmark/commit/e404ca3331e512c4561016e789278403cb36be9f"
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "e404ca3331e512c4561016e789278403cb36be9f",
+          "message": "Readded validation step",
+          "timestamp": "2020-01-04T23:19:40+01:00",
+          "tree_id": "89861b5dd4cff4cac5916383ef751359bc1601f8",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/e404ca3331e512c4561016e789278403cb36be9f"
         },
         "date": 1578347702151,
         "tool": "catch2",
         "benches": [
-            {
-                "name": "Fibonacci 20",
-                "value": 52.318,
-                "range": "+/- 12.444",
-                "unit": "us",
-                "extra": "100 samples"
-            },
-            {
-                "name": "Fibonacci 25",
-                "value": 577.348,
-                "range": "+/- 103.677",
-                "unit": "us",
-                "extra": "100 samples"
-            }
+          {
+            "name": "Fibonacci 20",
+            "value": 52.318,
+            "range": "+/- 12.444",
+            "unit": "us",
+            "extra": "100 samples"
+          },
+          {
+            "name": "Fibonacci 25",
+            "value": 577.348,
+            "range": "+/- 103.677",
+            "unit": "us",
+            "extra": "100 samples"
+          }
         ]
-    }
+      }
     ]
   },
   "repoUrl": "https://github.com/bernedom/github-action-benchmark"
