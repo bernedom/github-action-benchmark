@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578348545013,
+  "lastUpdate": 1578348548053,
   "entries": {
     "Rust Benchmark": [
       {
@@ -17779,6 +17779,42 @@ window.BENCHMARK_DATA = {
             "value": 27342.4530769229,
             "unit": "ns/iter",
             "extra": "iterations: 26000\ncpu: 27336.249730769225 ns\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "7e7ae9099de0aedeb665dcb0a5f2abbf270aa2f1",
+          "message": "Hint for creating existing data in CONTRIBUTING.md",
+          "timestamp": "2020-01-06T23:07:55+01:00",
+          "tree_id": "7853a47293ecc6d9c4bc9087aa73d0f07f52e444",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/7e7ae9099de0aedeb665dcb0a5f2abbf270aa2f1"
+        },
+        "date": 1578348546318,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "fib_10",
+            "value": 203.7489184126751,
+            "unit": "ns/iter",
+            "extra": "iterations: 3437078\ncpu: 203.7105291180474 ns\nthreads: 1"
+          },
+          {
+            "name": "fib_20",
+            "value": 27436.974715398326,
+            "unit": "ns/iter",
+            "extra": "iterations: 25035\ncpu: 27435.285839824246 ns\nthreads: 1"
           }
         ]
       }
