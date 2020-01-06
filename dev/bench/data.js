@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578348548053,
+  "lastUpdate": 1578348550838,
   "entries": {
     "Rust Benchmark": [
       {
@@ -15977,6 +15977,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.00038546480874628383",
             "extra": "mean: 2.680079518987513 msec\nrounds: 395"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "7e7ae9099de0aedeb665dcb0a5f2abbf270aa2f1",
+          "message": "Hint for creating existing data in CONTRIBUTING.md",
+          "timestamp": "2020-01-06T23:07:55+01:00",
+          "tree_id": "7853a47293ecc6d9c4bc9087aa73d0f07f52e444",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/7e7ae9099de0aedeb665dcb0a5f2abbf270aa2f1"
+        },
+        "date": 1578348544788,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "bench.py::test_fib_10",
+            "value": 43404.54901058764,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000040225579654861506",
+            "extra": "mean: 23.039059794310287 usec\nrounds: 27327"
+          },
+          {
+            "name": "bench.py::test_fib_20",
+            "value": 357.79152025558,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00036362203321785503",
+            "extra": "mean: 2.7949237010582966 msec\nrounds: 378"
           }
         ]
       }
