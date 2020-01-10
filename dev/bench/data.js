@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578690538916,
+  "lastUpdate": 1578690541752,
   "entries": {
     "Rust Benchmark": [
       {
@@ -17963,6 +17963,42 @@ window.BENCHMARK_DATA = {
             "value": 27436.974715398326,
             "unit": "ns/iter",
             "extra": "iterations: 25035\ncpu: 27435.285839824246 ns\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "6c16264009f25f0805d370aab3e379ca8ca801cf",
+          "message": "Hints for running tests in forked repos",
+          "timestamp": "2020-01-10T22:07:36+01:00",
+          "tree_id": "184e311ca32e56b1a4a4e7a82f3e80983b6b626e",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/6c16264009f25f0805d370aab3e379ca8ca801cf"
+        },
+        "date": 1578690538620,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "fib_10",
+            "value": 204.91148216310094,
+            "unit": "ns/iter",
+            "extra": "iterations: 3391678\ncpu: 204.86717872392367 ns\nthreads: 1"
+          },
+          {
+            "name": "fib_20",
+            "value": 28377.687099580748,
+            "unit": "ns/iter",
+            "extra": "iterations: 25286\ncpu: 28372.45831685518 ns\nthreads: 1"
           }
         ]
       }
