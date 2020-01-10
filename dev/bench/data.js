@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578348560695,
+  "lastUpdate": 1578690538916,
   "entries": {
     "Rust Benchmark": [
       {
@@ -8801,6 +8801,42 @@ window.BENCHMARK_DATA = {
             "value": 57449,
             "unit": "ns/op",
             "extra": "30000 times\n2 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "6c16264009f25f0805d370aab3e379ca8ca801cf",
+          "message": "Hints for running tests in forked repos",
+          "timestamp": "2020-01-10T22:07:36+01:00",
+          "tree_id": "184e311ca32e56b1a4a4e7a82f3e80983b6b626e",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/6c16264009f25f0805d370aab3e379ca8ca801cf"
+        },
+        "date": 1578690538123,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib10",
+            "value": 492,
+            "unit": "ns/op",
+            "extra": "3000000 times\n2 procs"
+          },
+          {
+            "name": "BenchmarkFib20",
+            "value": 60743,
+            "unit": "ns/op",
+            "extra": "20000 times\n2 procs"
           }
         ]
       }
