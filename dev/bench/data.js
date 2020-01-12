@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578864466418,
+  "lastUpdate": 1578864470118,
   "entries": {
     "Rust Benchmark": [
       {
@@ -9375,6 +9375,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "BenchmarkFib20",
             "value": 56403,
+            "unit": "ns/op",
+            "extra": "30000 times\n2 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "280dbdf04b44f11f4983da2e681f116e1bbecaea",
+          "message": "REMOVE ME Changed notification user",
+          "timestamp": "2020-01-12T22:27:09+01:00",
+          "tree_id": "d154f2d3df5adf832c5dccd57d8208be0b20fae8",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/280dbdf04b44f11f4983da2e681f116e1bbecaea"
+        },
+        "date": 1578864466986,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib10",
+            "value": 440,
+            "unit": "ns/op",
+            "extra": "3000000 times\n2 procs"
+          },
+          {
+            "name": "BenchmarkFib20",
+            "value": 54539,
             "unit": "ns/op",
             "extra": "30000 times\n2 procs"
           }
