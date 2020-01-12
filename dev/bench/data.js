@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578862732434,
+  "lastUpdate": 1578862736170,
   "entries": {
     "Rust Benchmark": [
       {
@@ -9015,6 +9015,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "BenchmarkFib20",
             "value": 58584,
+            "unit": "ns/op",
+            "extra": "30000 times\n2 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "448faad66c3b935a35140d5e960686f36a4f564f",
+          "message": "Catch2 example running locally",
+          "timestamp": "2020-01-12T21:57:58+01:00",
+          "tree_id": "ec174b1ae6091e8498287138f8ecdb03c02d1094",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/448faad66c3b935a35140d5e960686f36a4f564f"
+        },
+        "date": 1578862734454,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib10",
+            "value": 460,
+            "unit": "ns/op",
+            "extra": "3000000 times\n2 procs"
+          },
+          {
+            "name": "BenchmarkFib20",
+            "value": 55283,
             "unit": "ns/op",
             "extra": "30000 times\n2 procs"
           }
