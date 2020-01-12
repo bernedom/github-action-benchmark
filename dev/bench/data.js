@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578863766945,
+  "lastUpdate": 1578864457814,
   "entries": {
     "Rust Benchmark": [
       {
@@ -19399,6 +19399,42 @@ window.BENCHMARK_DATA = {
             "value": 27838.43367819311,
             "unit": "ns/iter",
             "extra": "iterations: 24841\ncpu: 27835.739261704446 ns\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "280dbdf04b44f11f4983da2e681f116e1bbecaea",
+          "message": "REMOVE ME Changed notification user",
+          "timestamp": "2020-01-12T22:27:09+01:00",
+          "tree_id": "d154f2d3df5adf832c5dccd57d8208be0b20fae8",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/280dbdf04b44f11f4983da2e681f116e1bbecaea"
+        },
+        "date": 1578864456930,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "fib_10",
+            "value": 200.4698936964191,
+            "unit": "ns/iter",
+            "extra": "iterations: 3501011\ncpu: 200.2241089788064 ns\nthreads: 1"
+          },
+          {
+            "name": "fib_20",
+            "value": 27041.44544822814,
+            "unit": "ns/iter",
+            "extra": "iterations: 25902\ncpu: 27036.00938151494 ns\nthreads: 1"
           }
         ]
       }
