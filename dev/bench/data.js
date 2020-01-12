@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578862619135,
+  "lastUpdate": 1578862622062,
   "entries": {
     "Rust Benchmark": [
       {
@@ -16421,6 +16421,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.000525063990386959",
             "extra": "mean: 2.869622030137009 msec\nrounds: 365"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "122289fb3335675108a04a06273ca0d29f5d83f0",
+          "message": "Removed caching step from ci and catch",
+          "timestamp": "2020-01-12T21:29:53+01:00",
+          "tree_id": "e58dfd10809c047c1d7e7455c47161b3ebc50e8c",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/122289fb3335675108a04a06273ca0d29f5d83f0"
+        },
+        "date": 1578862620181,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "bench.py::test_fib_10",
+            "value": 43307.9809276866,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000008809116483854468",
+            "extra": "mean: 23.090432261659757 usec\nrounds: 25318"
+          },
+          {
+            "name": "bench.py::test_fib_20",
+            "value": 354.67926408909295,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0002168053270113323",
+            "extra": "mean: 2.819448728045198 msec\nrounds: 353"
           }
         ]
       }
