@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578862187782,
+  "lastUpdate": 1578862615879,
   "entries": {
     "Rust Benchmark": [
       {
@@ -8943,6 +8943,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "BenchmarkFib20",
             "value": 56774,
+            "unit": "ns/op",
+            "extra": "30000 times\n2 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "122289fb3335675108a04a06273ca0d29f5d83f0",
+          "message": "Removed caching step from ci and catch",
+          "timestamp": "2020-01-12T21:29:53+01:00",
+          "tree_id": "e58dfd10809c047c1d7e7455c47161b3ebc50e8c",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/122289fb3335675108a04a06273ca0d29f5d83f0"
+        },
+        "date": 1578862614683,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib10",
+            "value": 550,
+            "unit": "ns/op",
+            "extra": "3000000 times\n2 procs"
+          },
+          {
+            "name": "BenchmarkFib20",
+            "value": 58584,
             "unit": "ns/op",
             "extra": "30000 times\n2 procs"
           }
