@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578861445232,
+  "lastUpdate": 1578862057148,
   "entries": {
     "Rust Benchmark": [
       {
@@ -18485,6 +18485,44 @@ window.BENCHMARK_DATA = {
             "name": "Fibonacci 25",
             "value": 218.804,
             "range": "+/- 23.999",
+            "unit": "us",
+            "extra": "100 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "b1219c2cb9325b62e6a02a07840b70fce0b56914",
+          "message": "Cacheless release",
+          "timestamp": "2020-01-12T21:46:29+01:00",
+          "tree_id": "869eb38f9bc3a07bd8c146085c192e245c0f333e",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/b1219c2cb9325b62e6a02a07840b70fce0b56914"
+        },
+        "date": 1578862056224,
+        "tool": "catch2",
+        "benches": [
+          {
+            "name": "Fibonacci 20",
+            "value": 20.704,
+            "range": "",
+            "unit": "us",
+            "extra": "100 samples"
+          },
+          {
+            "name": "Fibonacci 25",
+            "value": 212.371,
+            "range": "+/- 13.961",
             "unit": "us",
             "extra": "100 samples"
           }
