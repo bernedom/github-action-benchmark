@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578863411528,
+  "lastUpdate": 1578863414479,
   "entries": {
     "Rust Benchmark": [
       {
@@ -13709,6 +13709,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.90%",
             "unit": "ops/sec",
             "extra": "86 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "7f9ab65fc5622342399fa16d01de04a84f9b74b8",
+          "message": "Trivial implementation for extraction of catch2 result",
+          "timestamp": "2020-01-12T22:09:29+01:00",
+          "tree_id": "d154f2d3df5adf832c5dccd57d8208be0b20fae8",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/7f9ab65fc5622342399fa16d01de04a84f9b74b8"
+        },
+        "date": 1578863413414,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "fib(10)",
+            "value": 954996,
+            "range": "±2.71%",
+            "unit": "ops/sec",
+            "extra": "85 samples"
+          },
+          {
+            "name": "fib(20)",
+            "value": 7952,
+            "range": "±2.72%",
+            "unit": "ops/sec",
+            "extra": "84 samples"
           }
         ]
       }
