@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578863029035,
+  "lastUpdate": 1578863032099,
   "entries": {
     "Rust Benchmark": [
       {
@@ -18701,6 +18701,42 @@ window.BENCHMARK_DATA = {
             "value": 30332.887006620407,
             "unit": "ns/iter",
             "extra": "iterations: 23258\ncpu: 30331.056410697394 ns\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "062b6fdc9d47e899f7b0422d3f0a31e959f0ce77",
+          "message": "Catch2 example running locally",
+          "timestamp": "2020-01-12T22:03:07+01:00",
+          "tree_id": "d154f2d3df5adf832c5dccd57d8208be0b20fae8",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/062b6fdc9d47e899f7b0422d3f0a31e959f0ce77"
+        },
+        "date": 1578863031138,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "fib_10",
+            "value": 216.80305513772703,
+            "unit": "ns/iter",
+            "extra": "iterations: 3306103\ncpu: 216.6689700835092 ns\nthreads: 1"
+          },
+          {
+            "name": "fib_20",
+            "value": 26092.08813766244,
+            "unit": "ns/iter",
+            "extra": "iterations: 26209\ncpu: 26021.65530924492 ns\nthreads: 1"
           }
         ]
       }
