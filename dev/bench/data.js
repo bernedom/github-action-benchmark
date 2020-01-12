@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578863567142,
+  "lastUpdate": 1578863570109,
   "entries": {
     "Rust Benchmark": [
       {
@@ -17051,6 +17051,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0005482225181608853",
             "extra": "mean: 2.9890978056867628 msec\nrounds: 211"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "5098584e56a042d89c644928ad273541952e40dc",
+          "message": "Add support for catch2 benchmarks",
+          "timestamp": "2020-01-12T22:11:29+01:00",
+          "tree_id": "d154f2d3df5adf832c5dccd57d8208be0b20fae8",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/5098584e56a042d89c644928ad273541952e40dc"
+        },
+        "date": 1578863569101,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "bench.py::test_fib_10",
+            "value": 44675.01391321343,
+            "unit": "iter/sec",
+            "range": "stddev: 0.000014623647245340127",
+            "extra": "mean: 22.38387663275539 usec\nrounds: 31848"
+          },
+          {
+            "name": "bench.py::test_fib_20",
+            "value": 364.0091463723419,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00029964824952485175",
+            "extra": "mean: 2.747183717678095 msec\nrounds: 379"
           }
         ]
       }
