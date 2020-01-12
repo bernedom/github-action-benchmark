@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1578863405755,
+  "lastUpdate": 1578863411528,
   "entries": {
     "Rust Benchmark": [
       {
@@ -16865,6 +16865,44 @@ window.BENCHMARK_DATA = {
             "unit": "iter/sec",
             "range": "stddev: 0.0001498472626255349",
             "extra": "mean: 2.668791917989372 msec\nrounds: 378"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "7f9ab65fc5622342399fa16d01de04a84f9b74b8",
+          "message": "Trivial implementation for extraction of catch2 result",
+          "timestamp": "2020-01-12T22:09:29+01:00",
+          "tree_id": "d154f2d3df5adf832c5dccd57d8208be0b20fae8",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/7f9ab65fc5622342399fa16d01de04a84f9b74b8"
+        },
+        "date": 1578863410593,
+        "tool": "pytest",
+        "benches": [
+          {
+            "name": "bench.py::test_fib_10",
+            "value": 42527.37785174553,
+            "unit": "iter/sec",
+            "range": "stddev: 0.00002378920591061323",
+            "extra": "mean: 23.51426423435028 usec\nrounds: 22832"
+          },
+          {
+            "name": "bench.py::test_fib_20",
+            "value": 334.5491064552985,
+            "unit": "iter/sec",
+            "range": "stddev: 0.0005482225181608853",
+            "extra": "mean: 2.9890978056867628 msec\nrounds: 211"
           }
         ]
       }
