@@ -318,9 +318,9 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
     //                43.186 us     41.402 us     46.246 us <-- Actual benchmark data
     //                11.719 us      7.847 us     17.747 us <-- Ignored
 
-    const reTestCaseStart = /^(benchmark name) +(samples) +(iterations) +(estimated)/;
-    const reBenchmarkStart = /^([a-zA-Z\d ]+) +([\d]+) +([\d]+) +([\d]+\.[\d]+) (ms|us)/;
-    const reBenchmarkValues = /^ +([\d]+\.[\d]+) (us|ms) +([\d]+\.[\d]+) (us|ms) +([\d]+\.[\d]+) (us|ms)/;
+    const reTestCaseStart = /^benchmark name +samples +iterations +estimated/;
+    const reBenchmarkStart = /^([a-zA-Z\d ]+) +(\d+) +(\d+) +(\d+\.\d+) (ms|us)/;
+    const reBenchmarkValues = /^ +(\d+\.\d+) (us|ms) +(\d+\.\d+) (us|ms) +(\d+\.\d+) (us|ms)/;
 
     let benchmarkNr = -1;
     let testCaseNr = -1;
