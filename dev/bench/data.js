@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1579038516998,
+  "lastUpdate": 1579038520331,
   "entries": {
     "Rust Benchmark": [
       {
@@ -14259,6 +14259,44 @@ window.BENCHMARK_DATA = {
             "range": "±0.81%",
             "unit": "ops/sec",
             "extra": "90 samples"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "04090c9047f722d6eb2f076a3629a7249ea00903",
+          "message": "Add support for catch2 benchmarks",
+          "timestamp": "2020-01-14T22:47:45+01:00",
+          "tree_id": "8b8aa14431b0cf0a71b29780fb165b71f991379e",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/04090c9047f722d6eb2f076a3629a7249ea00903"
+        },
+        "date": 1579038514079,
+        "tool": "benchmarkjs",
+        "benches": [
+          {
+            "name": "fib(10)",
+            "value": 1058773,
+            "range": "±0.57%",
+            "unit": "ops/sec",
+            "extra": "91 samples"
+          },
+          {
+            "name": "fib(20)",
+            "value": 8836,
+            "range": "±1.05%",
+            "unit": "ops/sec",
+            "extra": "88 samples"
           }
         ]
       }
