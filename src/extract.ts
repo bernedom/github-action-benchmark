@@ -309,7 +309,15 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
 
     const ret = [];
     // Example:
-    //   test bench_fib_20 ... bench:      37,174 ns/iter (+/- 7,527)
+
+    // benchmark name samples       iterations    estimated <-- Start benchmark section
+    //                mean          low mean      high mean <-- Ignored
+    //                std dev       low std dev   high std dev <-- Ignored
+    // ----------------------------------------------------- <-- Ignored
+    // Fibonacci 20   100           2             8.4318 ms <-- Start actual benchmark
+    //                43.186 us     41.402 us     46.246 us <-- Actual benchmark data
+    //                11.719 us      7.847 us     17.747 us <-- Ignored
+
     const reTestCaseStart = /^(benchmark name) +(samples) +(iterations) +(estimated)/;
     const reBenchmarkStart = /^([a-zA-Z\d ]+) +([\d]+) +([\d]+) +([\d]+\.[\d]+) (ms|us)/;
     const reBenchmarkValues = /^ +([\d]+\.[\d]+) (us|ms) +([\d]+\.[\d]+) (us|ms) +([\d]+\.[\d]+) (us|ms)/;
