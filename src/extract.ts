@@ -320,7 +320,7 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
 
     const reTestCaseStart = /^benchmark name +samples +iterations +estimated/;
     const reBenchmarkStart = /^([a-zA-Z\d ]+) +(\d+) +(\d+) +(\d+\.\d+) (ms|us)/;
-    const reBenchmarkValues = /^ +(\d+\.\d+) (us|ms) +(\d+\.\d+) (us|ms) +(\d+\.\d+) (us|ms)/;
+    const reBenchmarkValues = /^ +(\d+\.\d+) (ns|us|ms|s) +(\d+\.\d+) (ns|us|ms|s) +(\d+\.\d+) (ns|us|ms|s)/;
 
     let benchmarkNr = -1;
     let testCaseNr = -1;
