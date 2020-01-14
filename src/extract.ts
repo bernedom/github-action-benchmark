@@ -369,6 +369,17 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
         }
     }
 
+    if (
+        ret.every(function(r) {
+            return r.range == '' && r.unit == '';
+        })
+    ) {
+        throw new Error(`Invalid range or unit for catch2 benchmark`);
+    }
+    // if (ret.every().range == '' || ret.unit == '') {
+    //
+    // }
+
     return ret;
 }
 
