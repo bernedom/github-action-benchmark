@@ -319,15 +319,12 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
     //                11.719 us      7.847 us     17.747 us <-- Ignored
 
     const reTestCaseStart = /^benchmark name +samples +iterations +estimated/;
-    const reBenchmarkStart = /^([a-zA-Z\d ]+) +(\d+) +(\d+) +(\d+(\.\d+)?) (ms|us)/;
+    const reBenchmarkStart = /^([a-zA-Z\d ]+) +(\d+) +(\d+) +(\d+(\.\d+)?) (ns|ms|us|s)/;
     const reBenchmarkValues = /^ +(\d+(?:\.\d+)?) (ns|us|ms|s) +(\d+(?:\.\d+)?) (ns|us|ms|s) +(\d+(?:\.\d+)?) (ns|us|ms|s)/;
 
     let benchmarkNr = -1;
     let testCaseNr = -1;
 
-    const currentValue = 0;
-    const currentUnit = '';
-    const currentRange = '';
     let linesSinceBenchmarkStart = -1;
 
     for (const line of lines) {
@@ -364,9 +361,9 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
             benchmarkNr++;
             ret.push({
                 name: benchmarkMatch[1].trim(),
-                value: currentValue,
-                range: currentRange,
-                unit: currentUnit,
+                value: 0,
+                range: '',
+                unit: '',
                 extra: benchmarkMatch[2] + ' samples',
             });
         }
