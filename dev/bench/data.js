@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1579121613126,
+  "lastUpdate": 1579121616208,
   "entries": {
     "Rust Benchmark": [
       {
@@ -20211,6 +20211,42 @@ window.BENCHMARK_DATA = {
             "value": 26520.11439175979,
             "unit": "ns/iter",
             "extra": "iterations: 23979\ncpu: 26552.534592768676 ns\nthreads: 1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "88404b780c651ed5e61c09bd0a5161678d1d835f",
+          "message": "Add support for catch2 benchmarks",
+          "timestamp": "2020-01-15T21:50:34+01:00",
+          "tree_id": "adb2dca42e7955d6b732ff0d0f315ac3cdfeb36f",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/88404b780c651ed5e61c09bd0a5161678d1d835f"
+        },
+        "date": 1579121612355,
+        "tool": "googlecpp",
+        "benches": [
+          {
+            "name": "fib_10",
+            "value": 236.25490751047755,
+            "unit": "ns/iter",
+            "extra": "iterations: 2851242\ncpu: 235.4269083438025 ns\nthreads: 1"
+          },
+          {
+            "name": "fib_20",
+            "value": 32171.82903430223,
+            "unit": "ns/iter",
+            "extra": "iterations: 22098\ncpu: 32169.9657435062 ns\nthreads: 1"
           }
         ]
       }
