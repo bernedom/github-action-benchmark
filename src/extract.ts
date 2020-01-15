@@ -1,5 +1,6 @@
-import { promises as fs } from 'fs';
 import * as github from '@actions/github';
+import { promises as fs } from 'fs';
+
 import { Config, ToolType } from './config';
 
 export interface BenchmarkResult {
@@ -72,11 +73,7 @@ export interface PytestBenchmarkJson {
         python_build: string[];
         release: string;
         system: string;
-        cpu: {
-            vendor_id: string;
-            hardware: string;
-            brand: string;
-        };
+        cpu: { vendor_id: string; hardware: string; brand: string };
     };
     commit_info: {
         id: string;
@@ -207,7 +204,8 @@ function extractGoResult(output: string): BenchmarkResult[] {
     const ret = [];
     // Example:
     //   BenchmarkFib20-8           30000             41653 ns/op
-    //   BenchmarkDoWithConfigurer1-8            30000000                42.3 ns/op
+    //   BenchmarkDoWithConfigurer1-8            30000000                42.3
+    //   ns/op
     const reExtract = /^(Benchmark\w+)(-\d+)?\s+(\d+)\s+([0-9.]+)\s+(.+)$/;
 
     for (const line of lines) {
@@ -238,7 +236,8 @@ function extractBenchmarkJsResult(output: string): BenchmarkResult[] {
     const ret = [];
     // Example:
     //   fib(20) x 11,465 ops/sec ±1.12% (91 runs sampled)
-    //   createObjectBuffer with 200 comments x 81.61 ops/sec ±1.70% (69 runs sampled)
+    //   createObjectBuffer with 200 comments x 81.61 ops/sec ±1.70% (69 runs
+    //   sampled)
     const reExtract = /^ x ([0-9,.]+)\s+(\S+)\s+((?:±|\+-)[^%]+%) \((\d+) runs sampled\)$/; // Note: Extract parts after benchmark name
     const reComma = /,/g;
 
@@ -310,13 +309,15 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
     const ret = [];
     // Example:
 
-    // benchmark name samples       iterations    estimated <-- Start benchmark section
+    // benchmark name samples       iterations    estimated <-- Start benchmark
+    // section
     //                mean          low mean      high mean <-- Ignored
     //                std dev       low std dev   high std dev <-- Ignored
     // ----------------------------------------------------- <-- Ignored
-    // Fibonacci 20   100           2             8.4318 ms <-- Start actual benchmark
-    //                43.186 us     41.402 us     46.246 us <-- Actual benchmark data
-    //                11.719 us      7.847 us     17.747 us <-- Ignored
+    // Fibonacci 20   100           2             8.4318 ms <-- Start actual
+    // benchmark
+    //                43.186 us     41.402 us     46.246 us <-- Actual benchmark
+    //                data 11.719 us      7.847 us     17.747 us <-- Ignored
 
     const reTestCaseStart = /^benchmark name +samples +iterations +estimated/;
     const reBenchmarkStart = /^([a-zA-Z\d ]+) +(\d+) +(\d+) +(\d+(\.\d+)?) (ns|ms|us|s)/;
@@ -371,7 +372,7 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
 
     if (
         ret.every(function(r) {
-            return r.range == '' && r.unit == '';
+            return r.range === '' || r.unit === '';
         })
     ) {
         throw new Error(`Invalid range or unit for catch2 benchmark`);
