@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1579121616208,
+  "lastUpdate": 1579121619992,
   "entries": {
     "Rust Benchmark": [
       {
@@ -9663,6 +9663,42 @@ window.BENCHMARK_DATA = {
           {
             "name": "BenchmarkFib20",
             "value": 53894,
+            "unit": "ns/op",
+            "extra": "30000 times\n2 procs"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "committer": {
+            "email": "dominik.berner@gmail.com",
+            "name": "Dominik Berner",
+            "username": "bernedom"
+          },
+          "distinct": true,
+          "id": "88404b780c651ed5e61c09bd0a5161678d1d835f",
+          "message": "Add support for catch2 benchmarks",
+          "timestamp": "2020-01-15T21:50:34+01:00",
+          "tree_id": "adb2dca42e7955d6b732ff0d0f315ac3cdfeb36f",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/88404b780c651ed5e61c09bd0a5161678d1d835f"
+        },
+        "date": 1579121613239,
+        "tool": "go",
+        "benches": [
+          {
+            "name": "BenchmarkFib10",
+            "value": 451,
+            "unit": "ns/op",
+            "extra": "3000000 times\n2 procs"
+          },
+          {
+            "name": "BenchmarkFib20",
+            "value": 54130,
             "unit": "ns/op",
             "extra": "30000 times\n2 procs"
           }
