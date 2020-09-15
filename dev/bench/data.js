@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1600179765777,
+  "lastUpdate": 1600179768816,
   "entries": {
     "Rust Benchmark": [
       {
@@ -5002,6 +5002,42 @@ window.BENCHMARK_DATA = {
             "name": "bench_fib_20",
             "value": 31773,
             "range": "+/- 4,871",
+            "unit": "ns/iter"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "lin90162@yahoo.co.jp",
+            "name": "rhysd",
+            "username": "rhysd"
+          },
+          "committer": {
+            "email": "lin90162@yahoo.co.jp",
+            "name": "rhysd",
+            "username": "rhysd"
+          },
+          "distinct": true,
+          "id": "a1914d7dcbe14d006e4b5f12c7ff303a82a411f1",
+          "message": "update changelog for v1.8.1",
+          "timestamp": "2020-06-10T22:41:53+09:00",
+          "tree_id": "ef826a918d186917372f542a1216379da3f53d13",
+          "url": "https://github.com/bernedom/github-action-benchmark/commit/a1914d7dcbe14d006e4b5f12c7ff303a82a411f1"
+        },
+        "date": 1600179767653,
+        "tool": "cargo",
+        "benches": [
+          {
+            "name": "bench_fib_10",
+            "value": 242,
+            "range": "± 24",
+            "unit": "ns/iter"
+          },
+          {
+            "name": "bench_fib_20",
+            "value": 31999,
+            "range": "± 1985",
             "unit": "ns/iter"
           }
         ]
