@@ -317,7 +317,7 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
 
     const reTestCaseStart = /^benchmark name +samples +iterations +estimated/;
     const reBenchmarkStart = /(\d+) +(\d+) +(?:\d+(\.\d+)?) (?:ns|ms|us|s)\s*$/;
-    const reBenchmarkValues = /^ +(\d+(?:\.\d+)?) (ns|us|ms|s) +(?:\d+(?:\.\d+)?) (?:ns|us|ms|s) +(?:\d+(?:\.\d+)?) (?:ns|us|ms|s)/;
+    const reBenchmarkValues = /^(?:.*) +(\d+(?:\.\d+)?) (ns|us|ms|s) +(?:\d+(?:\.\d+)?) (?:ns|us|ms|s) +(?:\d+(?:\.\d+)?) (?:ns|us|ms|s)/;
     const reEmptyLine = /^\s*$/;
     const reSeparator = /^-+$/;
 
@@ -347,7 +347,7 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
         if (!mean) {
             throw new Error(
                 `Mean values cannot be retrieved for benchmark '${name}' on parsing input '${meanLine ??
-                    'EOF'}' at line ${meanLineNum}`,
+                'EOF'}' at line ${meanLineNum}`,
             );
         }
 
@@ -359,7 +359,7 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
         if (!stdDev) {
             throw new Error(
                 `Std-dev values cannot be retrieved for benchmark '${name}' on parsing '${stdDevLine ??
-                    'EOF'}' at line ${stdDevLineNum}`,
+                'EOF'}' at line ${stdDevLineNum}`,
             );
         }
 
@@ -388,7 +388,7 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
         }
 
         // Eat until a separator line appears
-        for (;;) {
+        for (; ;) {
             const [line, num] = nextLine();
             if (line === null) {
                 throw new Error(`Separator '------' does not appear after benchmark suite at line ${num}`);
@@ -399,7 +399,7 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
         }
 
         let benchFound = false;
-        for (;;) {
+        for (; ;) {
             const res = extractBench();
             if (res === null) {
                 break;

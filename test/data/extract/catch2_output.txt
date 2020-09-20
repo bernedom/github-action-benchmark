@@ -4,14 +4,15 @@ Catch2_bench is a Catch v2.11.0 host application.
 Run with -? for options
 
 -------------------------------------------------------------------------------
-Fibonacci
+Unit_assignment
+  Construction
 -------------------------------------------------------------------------------
 /Users/rhayasd/Develop/github.com/rhysd/github-action-benchmark/examples/catch2/catch2_bench.cpp:5
 ...............................................................................
 
-benchmark name                                  samples       iterations    estimated
-                                                mean          low mean      high mean
-                                                std dev       low std dev   high std dev
+benchmark name                       samples       iterations    estimated
+                                     mean          low mean      high mean
+                                     std dev       low std dev   high std dev
 -------------------------------------------------------------------------------
 Fibonacci 10                                              100           208     7.1968 ms 
                                                        344 ns        341 ns        349 ns 
