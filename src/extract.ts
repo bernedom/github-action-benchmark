@@ -347,7 +347,7 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
         if (!mean) {
             throw new Error(
                 `Mean values cannot be retrieved for benchmark '${name}' on parsing input '${meanLine ??
-                'EOF'}' at line ${meanLineNum}`,
+                    'EOF'}' at line ${meanLineNum}`,
             );
         }
 
@@ -359,7 +359,7 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
         if (!stdDev) {
             throw new Error(
                 `Std-dev values cannot be retrieved for benchmark '${name}' on parsing '${stdDevLine ??
-                'EOF'}' at line ${stdDevLineNum}`,
+                    'EOF'}' at line ${stdDevLineNum}`,
             );
         }
 
@@ -388,7 +388,7 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
         }
 
         // Eat until a separator line appears
-        for (; ;) {
+        for (;;) {
             const [line, num] = nextLine();
             if (line === null) {
                 throw new Error(`Separator '------' does not appear after benchmark suite at line ${num}`);
@@ -399,7 +399,7 @@ function extractCatch2Result(output: string): BenchmarkResult[] {
         }
 
         let benchFound = false;
-        for (; ;) {
+        for (;;) {
             const res = extractBench();
             if (res === null) {
                 break;
